@@ -7,5 +7,23 @@
 
 <a href="https://www.w3schools.com">This is a link</a>
 
+<p>
+<!-- jinrishici api -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<div id="poem_sentence"></div>
+<div id="poem_info"></div>
+<script type="text/javascript">
+ jinrishici.load(function(result) {
+   var sentence = document.querySelector("#poem_sentence")
+   var info = document.querySelector("#poem_info")
+   sentence.innerHTML = result.data.content
+   info.innerHTML = '▒~@~P' + result.data.origin.dynasty + '▒~@~Q' + result.data.origin.author + '▒~@~J' + result.data.origin.title + '▒~@~K'
+ });
+</script>
+
+<img alt="▒~J▒~W▒▒~W▒~M" src="https://v2.jinrishici.com/one.svg" style="max-ww width:100%; display: block; margin: 0 auto;">
+
+<!-- end of jinrishici api -->  
+</p>
 </body>
 </html>
